@@ -6,6 +6,8 @@
     user: ubuntu
     become: true
     become_method: sudo
+    beome_user: root
+    gather_facts: no
     roles:
         - prepare
         - setup
