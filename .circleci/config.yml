@@ -45,11 +45,10 @@ jobs:
       - run:
           name: Run Playbook and Configure server
           command: |
-           ansible-playbook -i inventory main.yml 
+           ansible-playbook -i inventory main.yml --become-user=root
 
 workflows:
   build-workflow:
     jobs:
       - job1
-      - create_infrastructure
       - configure_infrastructure
