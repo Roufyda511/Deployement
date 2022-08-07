@@ -45,7 +45,7 @@ jobs:
       - run:
           name: Run Playbook and Configure server
           command: |
-           ansible-playbook -i inventory main.yml --become-user ubuntu
+           ansible-playbook -i inventory main.yml 
 
 workflows:
   build-workflow:
